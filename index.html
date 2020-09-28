@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+          background-image: url("https://www.solodev.com/assets/hero/hero.jpg");
+        }
+        .mfp-hide {
+            display: none!important;
+        }
+        .button {
+            padding: 20px 40px;
+            border-color: #f3f3f3;
+            font-size: 17px;
+            font-size: 1.7rem;
+            font-family: "museo-sans", Arial, Verdana;
+            font-weight: 500;
+            margin-top: 40px;
+            display: inline-block;
+        }
+        .button {
+            border: 2px solid #fff;
+            color: #fff;
+            text-transform: uppercase;
+            transition: all 0.15s ease-in-out;
+        }
+        .button .fa {
+            margin-left: 20px;
+        }
+        .button:hover {
+            background-color: rgba(0,0,0,0.7); 
+        }
+        h1 {
+            color: #fff;
+            font-size: 50px;
+            font-family: "museo-sans", Arial, Verdana;
+            text-transform: uppercase;
+            line-height: 72px;
+            letter-spacing: -5px;
+            margin: 185px 0 0 0;
+        }
+        span {
+            font-size: 23px;
+            font-size: 2.3rem;
+            display: block;
+            font-family: "museo-sans", Arial, Verdana;
+            font-weight: 500;
+            letter-spacing: 0px;
+            line-height: 25px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: none;
+        }
+        .content {
+          text-align: center;
+        }
+        
+            </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calc-body">
+            <div class="calc-display">
+                <p class="calc-typed-nuber" id="calc-typed-nuber"></p>
+                <p class="calc-result">= <span class="result"></span></p>
+            </div>
+            <div class="calc-keyboard">
+                <ul class="calc-number-listing">
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_1" data-target="1">1</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_2" data-target="2">2</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_3" data-target="3">3</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_4" data-target="4">4</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_5" data-target="5">5</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_6" data-target="6">6</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_7" data-target="7">7</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_8" data-target="8">8</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_9" data-target="9">9</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_c" data-target="clear">C</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_0" data-target="0">0</li>
+                    <li class="calc-number-item" onclick="doCalc(this.id);" id="list_dot" data-target=".">.</li>
+                </ul>
+                
+            <div class="calc-special-charctor">
+                <ul class="calc-charctor-listing">
+                    <li class="calc-charctor-item" onclick="doCalc(this.id);" id="list_plus" data-target="+">+</li>
+                    <li class="calc-charctor-item" onclick="doCalc(this.id);" id="list_subtraction" data-target="-">-</li>
+                    <li class="calc-charctor-item" onclick="doCalc(this.id);" id="list_multiply" data-target="*">*</li>
+                    <li class="calc-charctor-item" onclick="doCalc(this.id);" id="list_divide" data-target="/">/</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <h1><span>INTRODUCING</span>
+        WebCorpCo 2 . 0</h1>
+        <a href="#videoStory" class="button more" id="videoLink">Watch Video<i class="fa fa-play-circle" aria-hidden="true">&nbsp;</i></a>
+        <div id="videoStory" class="mfp-hide" style="max-width: 75%; margin: 0 auto;">
+         <iframe width="853" height="480" src="https://www.youtube.com/embed/oXoe3GWygq0?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        </div>
+
+
+        <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script>
+
+$('#videoLink')
+.magnificPopup({
+	  type:'inline',
+	  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  })
+  </script>
+    <script src="calculator.js"></script>
+</body>
+</html>
